@@ -1,11 +1,47 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
+        <loc>http://ompugao.github.com/blog/2012/10/05/Getting-Started/</loc>
+        <lastmod>2012-11-28T21:55:31+09:00</lastmod>
+    </url>
+    <url>
+        <loc>http://ompugao.github.com/blog/2012/10/06/deploy-TV-recording-environment/</loc>
+        <lastmod>2012-11-28T21:55:35+09:00</lastmod>
+    </url>
+    <url>
+        <loc>http://ompugao.github.com/blog/2012/10/07/move-to-the-pseudo-upper-line/</loc>
+        <lastmod>2012-11-28T21:55:36+09:00</lastmod>
+    </url>
+    <url>
+        <loc>http://ompugao.github.com/blog/2012/10/08/rosvim.vim/</loc>
+        <lastmod>2012-11-28T21:55:38+09:00</lastmod>
+    </url>
+    <url>
+        <loc>http://ompugao.github.com/blog/2012/10/10/dotfiles-setup/</loc>
+        <lastmod>2012-11-28T21:55:39+09:00</lastmod>
+    </url>
+    <url>
+        <loc>http://ompugao.github.com/blog/2012/10/13/C-M_PI-error/</loc>
+        <lastmod>2012-11-28T21:55:42+09:00</lastmod>
+    </url>
+    <url>
+        <loc>http://ompugao.github.com/blog/2012/10/13/diary/</loc>
+        <lastmod>2012-11-28T21:55:40+09:00</lastmod>
+    </url>
+    <url>
+        <loc>http://ompugao.github.com/blog/2012/10/17/tmux-powerline/</loc>
+        <lastmod>2012-11-28T21:55:44+09:00</lastmod>
+    </url>
+    <url>
+        <loc>http://ompugao.github.com/blog/2012/11/12/gmail.vim/</loc>
+        <lastmod>2012-11-28T21:55:45+09:00</lastmod>
+    </url>
+    <url>
         <loc>http://ompugao.github.com/</loc>
-        <lastmod>2012-11-28T21:05:00+09:00</lastmod>
+        <lastmod>2012-11-28T21:55:45+09:00</lastmod>
     </url>
     <url>
         <loc>http://ompugao.github.com/blog/archives/</loc>
-        <lastmod>2012-11-28T21:05:00+09:00</lastmod>
+        <lastmod>2012-11-28T21:55:45+09:00</lastmod>
     </url>
 </urlset>

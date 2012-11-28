@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: c | ompugao's blog]]></title>
+  <link href="http://ompugao.github.com/blog/categories/c/atom.xml" rel="self"/>
+  <link href="http://ompugao.github.com/"/>
+  <updated>2012-11-28T21:55:51+09:00</updated>
+  <id>http://ompugao.github.com/</id>
+  <author>
+    <name><![CDATA[ompugao]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[[C]error 'M_PI' undeclared]]></title>
+    <link href="http://ompugao.github.com/blog/2012/10/13/C-M_PI-error/"/>
+    <updated>2012-10-13T00:00:00+09:00</updated>
+    <id>http://ompugao.github.com/blog/2012/10/13/C-M_PI-error</id>
+    <content type="html"><![CDATA[<h1>M_PI not found.</h1>
+
+<p>I've already include math.h and ld libmath.so. Why!?</p>
+
+<p>Ans.:</p>
+
+<pre><code>#define _GNU_SOURCE
+</code></pre>
+
+<p>....( ´_ゝ｀) Hmm... I see.</p>
+]]></content>
+  </entry>
+  
+</feed>
