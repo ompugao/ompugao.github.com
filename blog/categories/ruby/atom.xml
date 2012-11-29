@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ruby | ompugao's blog]]></title>
+  <link href="http://ompugao.github.com/blog/categories/ruby/atom.xml" rel="self"/>
+  <link href="http://ompugao.github.com/"/>
+  <updated>2012-11-29T23:38:07+09:00</updated>
+  <id>http://ompugao.github.com/</id>
+  <author>
+    <name><![CDATA[ompugao]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[pythonとruby 英語と日本語]]></title>
+    <link href="http://ompugao.github.com/blog/2012/11/29/python%E3%81%A8ruby+%E8%8B%B1%E8%AA%9E%E3%81%A8%E6%97%A5%E6%9C%AC%E8%AA%9E/"/>
+    <updated>2012-11-29T23:29:00+09:00</updated>
+    <id>http://ompugao.github.com/blog/2012/11/29/pythonとruby 英語と日本語</id>
+    <content type="html"><![CDATA[<p>まぁよくあるネタなんでしょうが。</p>
+
+<p>例えば</p>
+
+<pre><code>python:
+    sorted([4,3,2,1])
+ruby:
+    [4,3,2,1].sort
+
+python:
+    I'll *sort* the array, [4,3,2,1].
+ruby:
+    配列[4,3,2,1]をsortする
+</code></pre>
+
+<p>とか</p>
+
+<pre><code>python:
+    len([3,2,1,4])
+ruby:
+    [3,2,1,4].length
+
+python:
+    the *length* of the array,[3,2,1,4]
+ruby:
+    配列[3,2,1,4]の長さ
+</code></pre>
+
+<p>みたいにpythonは英語,rubyは日本語で読めばいいんだと思った。</p>
+]]></content>
+  </entry>
+  
+</feed>
