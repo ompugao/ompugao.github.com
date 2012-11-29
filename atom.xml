@@ -4,7 +4,7 @@
   <title><![CDATA[ompugao's blog]]></title>
   <link href="http://ompugao.github.com/atom.xml" rel="self"/>
   <link href="http://ompugao.github.com/"/>
-  <updated>2012-11-29T13:25:41+09:00</updated>
+  <updated>2012-11-29T15:02:50+09:00</updated>
   <id>http://ompugao.github.com/</id>
   <author>
     <name><![CDATA[ompugao]]></name>
@@ -23,6 +23,8 @@
 <p>Owning to octpress, It was so a easy work to move my blog.</p>
 
 <p>This tool enables me to create a stylish page in a easy way.</p>
+
+<p>And personally, I highly evaluate the fact that it is written by Ruby (I&#8217;m a ruby lover).</p>
 
 <p>What a wonderful world!</p>
 ]]></content>
