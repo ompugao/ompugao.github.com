@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: pt3 | ompugao's blog]]></title>
+  <link href="http://ompugao.github.com/blog/categories/pt3/atom.xml" rel="self"/>
+  <link href="http://ompugao.github.com/"/>
+  <updated>2012-11-30T20:00:30+09:00</updated>
+  <id>http://ompugao.github.com/</id>
+  <author>
+    <name><![CDATA[ompugao]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[deploy TV recording environment]]></title>
+    <link href="http://ompugao.github.com/blog/2012/10/06/deploy-TV-recording-environment/"/>
+    <updated>2012-10-06T00:00:00+09:00</updated>
+    <id>http://ompugao.github.com/blog/2012/10/06/deploy-TV-recording-environment</id>
+    <content type="html"><![CDATA[<p>I'll write down how to deploy the TV recording environment on Linux using <a href="http://earthsoft.jp/PT3/index.html">pt3</a>.</p>
+
+<p>Thanks to all of developers of pt3's linux driver.</p>
+
+<p>My environment is as follows.</p>
+
+<ul>
+<li>uname -a
+
+<ul>
+<li><h1>=> Linux  2.6.32-5-amd64 #1 SMP Sun Sep 23 10:07:46 UTC 2012 x86_64 GNU/Linux</h1></li>
+</ul>
+</li>
+<li>lsb_release -a
+
+<ul>
+<li><h1>=> No LSB modules are available.</h1></li>
+<li><h1>=> Distributor ID: Debian</h1></li>
+<li><h1>=> Description:    Debian GNU/Linux 6.0.6 (squeeze)</h1></li>
+<li><h1>=> Release:        6.0.6</h1></li>
+<li><h1>=> Codename:       squeeze</h1></li>
+</ul>
+</li>
+</ul>
+
+
+<h2>install packages</h2>
+
+<pre><code>sudo aptitude install pkg-config subversion git-core libccid libpcsclite-dev pcsc-tools build-essential autoconf automake linux headers-`uname -r` mercurial-common pcscd
+</code></pre>
+
+<h2>install driver</h2>
+
+<pre><code>cd ~/src
+git clone https://github.com/m-tsudo/pt3.git
+cd pt3
+make
+sudo make install
+</code></pre>
+
+<h2>install recpt1 (a command for recording)</h2>
+
+<pre><code>cd ..
+hg clone http://hg.honeyplanet.jp/pt1/
+cd pt1
+edit decoder.h and pt1_dev.h
+
+    diff -r b14397800eae recpt1/decoder.h
+    --- a/recpt1/decoder.h  Wed Jun 27 06:56:33 2012 +0900
+    +++ b/recpt1/decoder.h  Sat Oct 06 00:12:12 2012 +0900
+    @@ -3,6 +3,9 @@
+     #define _DECODER_H_
+
+     #include "config.h"
+    +#include &lt;inttypes.h&gt;
+    +#include &lt;unistd.h&gt;
+    +//#include "stdint.h"
+
+     #ifdef HAVE_LIBARIB25
+
+    diff -r b14397800eae recpt1/pt1_dev.h
+    --- a/recpt1/pt1_dev.h  Wed Jun 27 06:56:33 2012 +0900
+    +++ b/recpt1/pt1_dev.h  Sat Oct 06 00:12:12 2012 +0900
+    @@ -3,24 +3,24 @@
+     #define _PT1_DEV_H_
+
+     char *bsdev[NUM_BSDEV] = {
+    -    "/dev/pt1video1",
+    -    "/dev/pt1video0",
+    -    "/dev/pt1video5",
+    -    "/dev/pt1video4",
+    -    "/dev/pt1video9",
+    -    "/dev/pt1video8",
+    -    "/dev/pt1video13",
+    -    "/dev/pt1video12"
+    +    "/dev/pt3video1",
+    +    "/dev/pt3video0",
+    +    "/dev/pt3video5",
+    +    "/dev/pt3video4",
+    +    "/dev/pt3video9",
+    +    "/dev/pt3video8",
+    +    "/dev/pt3video13",
+    +    "/dev/pt3video12"
+     };
+     char *isdb_t_dev[NUM_ISDB_T_DEV] = {
+    -    "/dev/pt1video2",
+    -    "/dev/pt1video3",
+    -    "/dev/pt1video6",
+    -    "/dev/pt1video7",
+    -    "/dev/pt1video10",
+    -    "/dev/pt1video11",
+    -    "/dev/pt1video14",
+    -    "/dev/pt1video15"
+    +    "/dev/pt3video2",
+    +    "/dev/pt3video3",
+    +    "/dev/pt3video6",
+    +    "/dev/pt3video7",
+    +    "/dev/pt3video10",
+    +    "/dev/pt3video11",
+    +    "/dev/pt3video14",
+    +    "/dev/pt3video15"
+     };
+
+     // 変換テーブル(ISDB-T用)
+
+./autogen.sh
+./configure --prefix=/usr/local/ #--enable-b25
+make &amp;&amp; sudo make install
+</code></pre>
+
+<h2>check the operatioin of B-CAS card reader</h2>
+
+<pre><code>pcsc_scan
+#=&gt; ... 
+#=&gt; 0: SCM SCR 3310 NTTCom[Vendor Interface] 00 0
+#=&gt; ...
+# B-CAS reader works correctly if you get a message noted previously.
+#/etc/init.d/pcscd を見ても pcscd が自動起動するかどうかわからないので、もし自動起動しなかったら、
+# Do not start from this script
+があるところの if ～ fi 全体をコメントアウトしておくでいいはず。
+    #if [ $1 = "start" -a -d /sys/fs/cgroup/systemd ]
+    #    then
+    #     # Do not start from this script
+    #     exit 0
+    #fi
+</code></pre>
+
+<h2>try to record</h2>
+
+<pre><code>recpt1 --b25 --strip 25 30 test.ts
+recpt1 25 30 test.ts --device /dev/pt3video*
+# then you get a ts file, which includes a low-quality movie.
+</code></pre>
+
+<h2>install recpt1 which includes arib25(decoder)</h2>
+
+<pre><code>sudo aptitude install pkg-config
+cd ~/src/pt1
+hg up -C -r 73 
+(or
+    wget http://hg.honeyplanet.jp/pt1/rev/c44e16dbb0e2
+)
+cd arib25
+make &amp;&amp; sudo make install
+#this line generates /usr/local/bin/b25 file.
+
+# And then, configure/compile recpt1 again.
+# please check that configure script dump the following line.
+""checking for create_arib_std_b25 in -larib25... yes""
+</code></pre>
+
+<h2>install epgrec</h2>
+
+<h3>install epgdumpr</h3>
+
+<pre><code>cd src
+#get epgdumppr2.tar.gz from http://www.mda.or.jp/epgrec/index.php?plugin=attach&amp;refer=インストール前の準備&amp;openfile=epgdumpr2.tar.gz
+tar axvf epgdumpr2.tar.gz  
+cd epgdumpr2
+make
+sudo cp epgdumpr2 /usr/local/bin/
+sudo aptitude install at
+sudo vipasswd
+### www-dataがnologinの場合は/bin/shにする
+</code></pre>
+
+<h3>install and set up mysql</h3>
+
+<pre><code>spare someone the details.
+</code></pre>
+
+<h3>install epgrec</h3>
+
+<pre><code>sudo aptitude insatll apache2 libapache2-mod-php5 php5-mysql
+cd /var/www
+sudo git clone git://git.sourceforge.jp/gitroot/epgrec/epgrec.git
+sudo chown www-data:www-data epgrec -R
+cd epgrec
+sudo chmod 777 cache templates_c video thumbs settings
+sudo cp config.php.sample config.php
+sudo vi config.php
+...
+sudo cp do-record.sh.pt1 do-record.sh
+
+# Then access http://localhost/epgrec and continue to set up.
+# following this site ↓
+</code></pre>
+
+<p><a href="http://www.mda.or.jp/epgrec/index.php/epgrec%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A">epgrecのインストールと設定 - 録画予約システムepgrec</a></p>
+
+<p>That's all.</p>
+
+<h2>links</h2>
+
+<ul>
+<li><a href="http://d.hatena.ne.jp/nagonago/20120811"> pt3 を debian wheezy で使ってみる - なごなごの駄目人間と暮らそう。 </a></li>
+<li><a href="http://aqua-linux.blog.so-net.ne.jp/2012-07-27"> Ubuntu 12.04でPT3を試用してみた：PC生活めも：So-netブログ </a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
