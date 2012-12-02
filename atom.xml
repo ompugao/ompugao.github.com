@@ -4,7 +4,7 @@
   <title><![CDATA[ompugao's blog]]></title>
   <link href="http://ompugao.github.com/atom.xml" rel="self"/>
   <link href="http://ompugao.github.com/"/>
-  <updated>2012-11-30T20:05:31+09:00</updated>
+  <updated>2012-12-02T10:30:36+09:00</updated>
   <id>http://ompugao.github.com/</id>
   <author>
     <name><![CDATA[ompugao]]></name>
@@ -12,6 +12,22 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[save-file-as-sudoer-without-sudo.vim]]></title>
+    <link href="http://ompugao.github.com/blog/2012/12/02/save-file-as-sudoer-without-sudo-dot-vim/"/>
+    <updated>2012-12-02T10:28:00+09:00</updated>
+    <id>http://ompugao.github.com/blog/2012/12/02/save-file-as-sudoer-without-sudo-dot-vim</id>
+    <content type="html"><![CDATA[<p>I always forget how to do this.↓</p>
+
+<pre><code>:w !sudo tee &gt;/dev/null %
+</code></pre>
+
+<p>&#8230; ok, I remembered!</p>
+
+<p>&#8230; Maybe.(・ω・)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[python and ruby, English and Japanese]]></title>
