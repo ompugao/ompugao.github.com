@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: plugin | ompugao's blog]]></title>
+  <link href="http://ompugao.github.com/blog/categories/plugin/atom.xml" rel="self"/>
+  <link href="http://ompugao.github.com/"/>
+  <updated>2012-12-04T00:56:35+09:00</updated>
+  <id>http://ompugao.github.com/</id>
+  <author>
+    <name><![CDATA[ompugao]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[wrote a vim plugin called ctrlp-z]]></title>
+    <link href="http://ompugao.github.com/blog/2012/12/04/ctrlp-z/"/>
+    <updated>2012-12-04T00:47:00+09:00</updated>
+    <id>http://ompugao.github.com/blog/2012/12/04/ctrlp-z</id>
+    <content type="html"><![CDATA[<p>Today, I wrote a vim plugin called <a href="https://github.com/ompugao/ctrlp-z">ctrlp-z</a></p>
+
+<p>This is a interface to <a href="https://github.com/clvv/fasd">fasd</a> via <a href="http://kien.github.com/ctrlp.vim/">ctrlp</a>.</p>
+
+<p>One example of setting .vimrc is as follows.</p>
+
+<pre><code>nnoremap &lt;silent&gt;&lt;C-p&gt;&lt;C-f&gt; :&lt;C-u&gt;CtrlPF&lt;CR&gt;
+nnoremap &lt;silent&gt;&lt;C-p&gt;&lt;C-z&gt; :&lt;C-u&gt;CtrlPZ&lt;CR&gt;
+</code></pre>
+
+<p>CtrlPZ is a function to change your working directory(:lcd), and
+CtrlPF is a function to edit your most recently used file(:edit/:tabedit).</p>
+
+<p>This plugin is so short (thanks to the ctrlp's cool user commands!) that you can understand what is written in the code at a glance.</p>
+
+<p>Thanks.</p>
+]]></content>
+  </entry>
+  
+</feed>

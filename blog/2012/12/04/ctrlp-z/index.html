@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: ruby - ompugao's blog</title>
+  <title>wrote a vim plugin called ctrlp-z - ompugao's blog</title>
   <meta name="author" content="ompugao">
 
   
-  <meta name="description" content="Category: ruby">
+  <meta name="description" content="Today, I wrote a vim plugin called ctrlp-z This is a interface to fasd via ctrlp. One example of setting .vimrc is as follows. nnoremap &lt;silent&gt &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://ompugao.github.comblog/categories/ruby/">
+  <link rel="canonical" href="http://ompugao.github.com/blog/2012/12/04/ctrlp-z/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -73,36 +73,110 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: Ruby</h1>
+    
+      
+        <h1 class="entry-title">Wrote a Vim Plugin Called Ctrlp-z</h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-04T00:47:00+09:00" pubdate data-updated="true">Dec 4<span>th</span>, 2012</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><p>Today, I wrote a vim plugin called <a href="https://github.com/ompugao/ctrlp-z">ctrlp-z</a></p>
 
-  
-  <h2>2012</h2>
+<p>This is a interface to <a href="https://github.com/clvv/fasd">fasd</a> via <a href="http://kien.github.com/ctrlp.vim/">ctrlp</a>.</p>
 
-<article>
-  
-<h1><a href="/blog/2012/11/29/python-and-ruby-English-and-Japanese/">python and ruby, English and Japanese</a></h1>
-<time datetime="2012-11-29T23:29:00+09:00" pubdate><span class='month'>Nov</span> <span class='day'>29</span> <span class='year'>2012</span></time>
+<p>One example of setting .vimrc is as follows.</p>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/python/'>python</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a></span>
-</footer>
+<pre><code>nnoremap &lt;silent&gt;&lt;C-p&gt;&lt;C-f&gt; :&lt;C-u&gt;CtrlPF&lt;CR&gt;
+nnoremap &lt;silent&gt;&lt;C-p&gt;&lt;C-z&gt; :&lt;C-u&gt;CtrlPZ&lt;CR&gt;
+</code></pre>
 
+<p>CtrlPZ is a function to change your working directory(:lcd), and
+CtrlPF is a function to edit your most recently used file(:edit/:tabedit).</p>
 
-</article>
+<p>This plugin is so short (thanks to the ctrlp&#8217;s cool user commands!) that you can understand what is written in the code at a glance.</p>
 
+<p>Thanks.</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">ompugao</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-04T00:47:00+09:00" pubdate data-updated="true">Dec 4<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/plugin/'>plugin</a>, <a class='category' href='/blog/categories/vim/'>vim</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://ompugao.github.com/blog/2012/12/04/ctrlp-z/" data-via="ompugao" data-counturl="http://ompugao.github.com/blog/2012/12/04/ctrlp-z/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left articlenav" href="/blog/2012/12/02/save-file-as-sudoer-without-sudo-dot-vim/" title="Previous Post: save file as sudoer without sudo.vim">&laquo; save file as sudoer without sudo.vim</a>
+      
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -210,7 +284,10 @@
       var disqus_shortname = 'scrabblenote';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://ompugao.github.com/blog/2012/12/04/ctrlp-z/';
+        var disqus_url = 'http://ompugao.github.com/blog/2012/12/04/ctrlp-z/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
