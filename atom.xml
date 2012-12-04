@@ -4,7 +4,7 @@
   <title><![CDATA[ompugao's blog]]></title>
   <link href="http://ompugao.github.com/atom.xml" rel="self"/>
   <link href="http://ompugao.github.com/"/>
-  <updated>2012-12-04T01:01:18+09:00</updated>
+  <updated>2012-12-04T23:45:09+09:00</updated>
   <id>http://ompugao.github.com/</id>
   <author>
     <name><![CDATA[ompugao]]></name>
@@ -12,6 +12,20 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[I wrote a termtter plugin called mute.rb]]></title>
+    <link href="http://ompugao.github.com/blog/2012/12/04/i-wrote-a-termtter-plugin-called-mute-dot-rb/"/>
+    <updated>2012-12-04T23:42:00+09:00</updated>
+    <id>http://ompugao.github.com/blog/2012/12/04/i-wrote-a-termtter-plugin-called-mute-dot-rb</id>
+    <content type="html"><![CDATA[<p>Today, I wrote a termtter plugin that mutes statuses that includes some words or is tweeted by some users.</p>
+
+<script src="https://gist.github.com/4202307.js"> </script>
+
+
+<p>Hey Me, WHEN YOU ARE GOING TO WRITE YOUR GRADUATION THESIS!?!?!?</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[I wrote a vim plugin called ctrlp-z]]></title>
