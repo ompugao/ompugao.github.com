@@ -4,7 +4,7 @@
   <title><![CDATA[ompugao's blog]]></title>
   <link href="http://ompugao.github.com/atom.xml" rel="self"/>
   <link href="http://ompugao.github.com/"/>
-  <updated>2012-12-04T23:45:09+09:00</updated>
+  <updated>2012-12-05T13:29:33+09:00</updated>
   <id>http://ompugao.github.com/</id>
   <author>
     <name><![CDATA[ompugao]]></name>
@@ -12,6 +12,24 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[look into English dictionary from terminal]]></title>
+    <link href="http://ompugao.github.com/blog/2012/12/05/look-into-english-dictionary-from-terminal/"/>
+    <updated>2012-12-05T13:28:00+09:00</updated>
+    <id>http://ompugao.github.com/blog/2012/12/05/look-into-english-dictionary-from-terminal</id>
+    <content type="html"><![CDATA[<script src="https://gist.github.com/4212202.js"> </script>
+
+
+<p>usage:</p>
+
+<pre><code>edic in front of
+edic information
+</code></pre>
+
+<p>etc.etc&#8230;</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[I wrote a termtter plugin called mute.rb]]></title>
