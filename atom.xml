@@ -4,7 +4,7 @@
   <title><![CDATA[ompugao's blog]]></title>
   <link href="http://ompugao.github.com/atom.xml" rel="self"/>
   <link href="http://ompugao.github.com/"/>
-  <updated>2012-12-10T11:05:58+09:00</updated>
+  <updated>2012-12-10T14:00:17+09:00</updated>
   <id>http://ompugao.github.com/</id>
   <author>
     <name><![CDATA[ompugao]]></name>
@@ -12,6 +12,32 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[change my filer on vim]]></title>
+    <link href="http://ompugao.github.com/blog/2012/12/10/change-my-filer-on-vim/"/>
+    <updated>2012-12-10T13:55:00+09:00</updated>
+    <id>http://ompugao.github.com/blog/2012/12/10/change-my-filer-on-vim</id>
+    <content type="html"><![CDATA[<p><a href="https://github.com/vim-jp/issues/issues/275">let g:netrw_liststyle=3でディレクトリ移動ができない · Issue #275 · vim-jp/issues</a></p>
+
+<p>にissue登録したら、伸びた。</p>
+
+<p>netrw.vimをちらっとみたら、foldingだけでお腹いっぱいになる。</p>
+
+<p>ずいぶんと根の深い問題のようだったので、しぶしぶnetrwを止め、nerdtreeに移行しました。</p>
+
+<pre><code>NeoBundle 'scrooloose/nerdtree'
+let NERDTreeShowHidden = 1
+nnoremap &lt;C-@&gt;&lt;C-t&gt; :&lt;C-u&gt;NERDTreeToggle&lt;CR&gt;
+nnoremap &lt;C-@&gt;&lt;C-f&gt; :&lt;C-u&gt;NERDTreeFocus&lt;CR&gt;
+nnoremap &lt;space&gt;e   :&lt;C-u&gt;NERDTree&lt;CR&gt;
+let g:NERDTreeWinPos="left" "or right
+let g:NERDTreeIgnore=['\.swp$', '\~$']
+</code></pre>
+
+<p>vim-jpのみなさんには頭が下がります。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[look into English dictionary from your terminal]]></title>

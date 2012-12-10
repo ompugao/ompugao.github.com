@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: ubuntu - ompugao's blog</title>
+  <title>change my filer on vim - ompugao's blog</title>
   <meta name="author" content="ompugao">
 
   
-  <meta name="description" content="Category: ubuntu">
+  <meta name="description" content="let g:netrw_liststyle=3でディレクトリ移動ができない · Issue #275 · vim-jp/issues にissue登録したら、伸びた。 netrw.vimをちらっとみたら、foldingだけでお腹いっぱいになる。 ずいぶんと根の深い問題のようだったので、 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://ompugao.github.comblog/categories/ubuntu/">
+  <link rel="canonical" href="http://ompugao.github.com/blog/2012/12/10/change-my-filer-on-vim/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -85,36 +85,106 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: ubuntu</h1>
+    
+      
+        <h1 class="entry-title">change my filer on vim</h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-10T13:55:00+09:00" pubdate data-updated="true">Dec 10<span>th</span>, 2012</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><p><a href="https://github.com/vim-jp/issues/issues/275">let g:netrw_liststyle=3でディレクトリ移動ができない · Issue #275 · vim-jp/issues</a></p>
 
-  
-  <h2>2012</h2>
+<p>にissue登録したら、伸びた。</p>
 
-<article>
-  
-<h1><a href="/blog/2012/10/13/diary/">how to fix the resolution of my computer?  etc...</a></h1>
-<time datetime="2012-10-13T00:00:00+09:00" pubdate><span class='month'>Oct</span> <span class='day'>13</span> <span class='year'>2012</span></time>
+<p>netrw.vimをちらっとみたら、foldingだけでお腹いっぱいになる。</p>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/haskell/'>haskell</a>, <a class='category' href='/blog/categories/resolution/'>resolution</a>, <a class='category' href='/blog/categories/ubuntu/'>ubuntu</a>, <a class='category' href='/blog/categories/vimperator/'>vimperator</a></span>
-</footer>
+<p>ずいぶんと根の深い問題のようだったので、しぶしぶnetrwを止め、nerdtreeに移行しました。</p>
 
+<pre><code>NeoBundle 'scrooloose/nerdtree'
+let NERDTreeShowHidden = 1
+nnoremap &lt;C-@&gt;&lt;C-t&gt; :&lt;C-u&gt;NERDTreeToggle&lt;CR&gt;
+nnoremap &lt;C-@&gt;&lt;C-f&gt; :&lt;C-u&gt;NERDTreeFocus&lt;CR&gt;
+nnoremap &lt;space&gt;e   :&lt;C-u&gt;NERDTree&lt;CR&gt;
+let g:NERDTreeWinPos="left" "or right
+let g:NERDTreeIgnore=['\.swp$', '\~$']
+</code></pre>
 
-</article>
-
+<p>vim-jpのみなさんには頭が下がります。</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">ompugao</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-10T13:55:00+09:00" pubdate data-updated="true">Dec 10<span>th</span>, 2012</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://ompugao.github.com/blog/2012/12/10/change-my-filer-on-vim/" data-via="ompugao" data-counturl="http://ompugao.github.com/blog/2012/12/10/change-my-filer-on-vim/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left articlenav" href="/blog/2012/12/05/look-into-english-dictionary-from-terminal/" title="Previous Post: look into English dictionary from your terminal">&laquo; look into English dictionary from your terminal</a>
+      
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -222,7 +292,10 @@
       var disqus_shortname = 'scrabblenote';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://ompugao.github.com/blog/2012/12/10/change-my-filer-on-vim/';
+        var disqus_url = 'http://ompugao.github.com/blog/2012/12/10/change-my-filer-on-vim/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
