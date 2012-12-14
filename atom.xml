@@ -4,7 +4,7 @@
   <title><![CDATA[ompugao's blog]]></title>
   <link href="http://ompugao.github.com/atom.xml" rel="self"/>
   <link href="http://ompugao.github.com/"/>
-  <updated>2012-12-11T21:52:59+09:00</updated>
+  <updated>2012-12-14T13:52:05+09:00</updated>
   <id>http://ompugao.github.com/</id>
   <author>
     <name><![CDATA[ompugao]]></name>
@@ -12,6 +12,47 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Can't git push --force]]></title>
+    <link href="http://ompugao.github.com/blog/2012/12/14/cant-git-push-force/"/>
+    <updated>2012-12-14T13:44:00+09:00</updated>
+    <id>http://ompugao.github.com/blog/2012/12/14/cant-git-push-force</id>
+    <content type="html"><![CDATA[<p>Today, I cannot git push &#8211;force.(Please don&#8217;t say I should not do the command&#8230;)</p>
+
+<pre><code>% git push --force origin master
+Counting objects: 11, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (8/8), 931 bytes, done.
+Total 8 (delta 6), reused 4 (delta 2)
+error: denying non-fast forward refs/heads/master (you should pull first)
+To ******/*******
+ ! [remote rejected] master -&gt; master (non-fast forward)
+ error: failed to push some refs to '****************'
+</code></pre>
+
+<p>Why????</p>
+
+<p>Answer:</p>
+
+<pre><code>ssh repos_machine
+cd path/to/git/bare/repos
+cat config
+[core]
+        repositoryformatversion = 0
+        filemode = true
+        bare = true
+        sharedrepository = 1
+[receive]
+        denyNonFastforwards = true    &lt;&lt;&lt;===!!!!!!!
+</code></pre>
+
+<p>By changing the receive.denyNonFastforwards option to &#8216;false&#8217;, you can git push &#8211;force.</p>
+
+<p>I&#8217;ve never seen this option until today.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[change my filer on vim]]></title>

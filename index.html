@@ -9,7 +9,8 @@
   <meta name="author" content="ompugao">
 
   
-  <meta name="description" content="let g:netrw_liststyle=3でディレクトリ移動ができない · Issue #275 · vim-jp/issues にissue登録したら、伸びた。 netrw.vimをちらっとみたら、foldingだけでお腹いっぱいになる。 ずいぶんと根の深い問題のようだったので、 &hellip;">
+  <meta name="description" content="Today, I cannot git push &#8211;force.(Please don&#8217;t say I should not do the command&#8230;) % git push --force origin master
+Counting objects: &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -86,6 +87,76 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/blog/2012/12/14/cant-git-push-force/">Can&#8217;t git push &#8211;force</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-14T13:44:00+09:00" pubdate data-updated="true">Dec 14<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Today, I cannot git push &#8211;force.(Please don&#8217;t say I should not do the command&#8230;)</p>
+
+<pre><code>% git push --force origin master
+Counting objects: 11, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (8/8), 931 bytes, done.
+Total 8 (delta 6), reused 4 (delta 2)
+error: denying non-fast forward refs/heads/master (you should pull first)
+To ******/*******
+ ! [remote rejected] master -&gt; master (non-fast forward)
+ error: failed to push some refs to '****************'
+</code></pre>
+
+<p>Why????</p>
+
+<p>Answer:</p>
+
+<pre><code>ssh repos_machine
+cd path/to/git/bare/repos
+cat config
+[core]
+        repositoryformatversion = 0
+        filemode = true
+        bare = true
+        sharedrepository = 1
+[receive]
+        denyNonFastforwards = true    &lt;&lt;&lt;===!!!!!!!
+</code></pre>
+
+<p>By changing the receive.denyNonFastforwards option to &#8216;false&#8217;, you can git push &#8211;force.</p>
+
+<p>I&#8217;ve never seen this option until today.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -581,67 +652,6 @@ ruby:
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
-        <h1 class="entry-title"><a href="/blog/2012/10/13/diary/">how to fix the resolution of my computer?  etc&#8230;</a></h1>
-      
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-10-13T00:00:00+09:00" pubdate data-updated="true">Oct 13<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h1>how to fix the resolution of my computer?</h1>
-
-<p>I&#8217;ve tried to fix the resolution of my computer with cvt/xrandr command, but xrandr says:</p>
-
-<pre><code>X Error of failed request: BadMatch (invalid parameter attributes)
-</code></pre>
-
-<p>What should I do&#8230;</p>
-
-<h1>Bumped into dependency hell.</h1>
-
-<p>When I try to install hoogle, cabal returned a dependency error.</p>
-
-<p>&#8230;. I can see the future in which I am caught in the tangled dependency hell over some libraries I use.</p>
-
-<p>Cabal developers should implement a system like the rvm&#8217;s gemset.</p>
-
-<h1>vimperator dump error:Model.db is undefined</h1>
-
-<p>Thanks to this page:</p>
-
-<p><a href="http://friendfeed.com/ebith/798d211a/model-db-is-undefined">Model.db is&#8230; - ebith - FriendFeed<br>http://friendfeed.com/ebith/798d211a/model-db-is-undefined</a></p>
-
-<p>I deleted hatenaBookmark addon, delete ~/.mozilla/***/hatenabookmark , reinstall hatena, and login to hatena to fix this problem.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -657,6 +667,10 @@ ruby:
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/12/14/cant-git-push-force/">Can&#8217;t git push &#8211;force</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/12/10/change-my-filer-on-vim/">change my filer on vim</a>
       </li>
     
@@ -670,10 +684,6 @@ ruby:
     
       <li class="post">
         <a href="/blog/2012/12/04/ctrlp-z/">I wrote a vim plugin called ctrlp-z</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/12/02/save-file-as-sudoer-without-sudo-dot-vim/">save file as sudoer without sudo.vim</a>
       </li>
     
   </ul>
