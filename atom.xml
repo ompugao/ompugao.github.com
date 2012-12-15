@@ -4,7 +4,7 @@
   <title><![CDATA[ompugao's blog]]></title>
   <link href="http://ompugao.github.com/atom.xml" rel="self"/>
   <link href="http://ompugao.github.com/"/>
-  <updated>2012-12-14T13:52:05+09:00</updated>
+  <updated>2012-12-15T14:25:22+09:00</updated>
   <id>http://ompugao.github.com/</id>
   <author>
     <name><![CDATA[ompugao]]></name>
@@ -12,6 +12,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[To vim+git users]]></title>
+    <link href="http://ompugao.github.com/blog/2012/12/15/to-vim-plus-git-users/"/>
+    <updated>2012-12-15T14:17:00+09:00</updated>
+    <id>http://ompugao.github.com/blog/2012/12/15/to-vim-plus-git-users</id>
+    <content type="html"><![CDATA[<p>You should install <a href="https://github.com/tpope/vim-fugitive">fugitive</a> to your vim and watch these videos right now.</p>
+
+<p><a href="http://vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/">Fugitive.vim - a complement to command line git</a></p>
+
+<p><a href="http://vimcasts.org/episodes/fugitive-vim-working-with-the-git-index/">Fugitive.vim - working with the git index</a></p>
+
+<p><a href="http://vimcasts.org/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff/">Fugitive.vim - resolving merge conflicts with vimdiff</a></p>
+
+<p><a href="http://vimcasts.org/episodes/fugitive-vim-browsing-the-git-object-database/">Fugitive.vim - browsing the git object database</a></p>
+
+<p><a href="http://vimcasts.org/episodes/fugitive-vim-exploring-the-history-of-a-git-repository/">Fugitive.vim - exploring the history of a git repository</a></p>
+
+<p>The 2nd video is the most useful one, I think.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Can't git push --force]]></title>
