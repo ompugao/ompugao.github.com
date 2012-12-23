@@ -4,7 +4,7 @@
   <title><![CDATA[ompugao's blog]]></title>
   <link href="http://ompugao.github.com/atom.xml" rel="self"/>
   <link href="http://ompugao.github.com/"/>
-  <updated>2012-12-15T14:25:22+09:00</updated>
+  <updated>2012-12-23T12:20:51+09:00</updated>
   <id>http://ompugao.github.com/</id>
   <author>
     <name><![CDATA[ompugao]]></name>
@@ -12,6 +12,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[how to erase already existed characters]]></title>
+    <link href="http://ompugao.github.com/blog/2012/12/23/how-to-erase-already-existed-characters/"/>
+    <updated>2012-12-23T12:14:00+09:00</updated>
+    <id>http://ompugao.github.com/blog/2012/12/23/how-to-erase-already-existed-characters</id>
+    <content type="html"><![CDATA[<p>So far, I always wondered why vim cannot erase the characters over insert-mode starting point.
+&#8220;:help backspace&#8221; doesn&#8217;t provide an answer to my question.</p>
+
+<p>Ans.:</p>
+
+<pre><code>set backspace=indent,eol,start
+</code></pre>
+
+<p>&#8220;:help i_backspacing&#8221; gives me an answer. How can I find such a help text query!!!</p>
+
+<p>I also feel these difficulty in googling some topic.</p>
+
+<p>&#8220;What kind of text should I insert to this textbox&#8230;&#8221;</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[To vim+git users]]></title>
