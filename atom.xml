@@ -4,7 +4,7 @@
   <title><![CDATA[ompugao's blog]]></title>
   <link href="http://ompugao.github.com/atom.xml" rel="self"/>
   <link href="http://ompugao.github.com/"/>
-  <updated>2013-01-01T00:11:06+09:00</updated>
+  <updated>2013-01-02T08:23:52+09:00</updated>
   <id>http://ompugao.github.com/</id>
   <author>
     <name><![CDATA[ompugao]]></name>
@@ -12,6 +12,43 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[disable auto character conversion when editting tex on vim]]></title>
+    <link href="http://ompugao.github.com/blog/2013/01/02/disable-auto-character-conversion-when-editting-tex-on-vim/"/>
+    <updated>2013-01-02T07:48:00+09:00</updated>
+    <id>http://ompugao.github.com/blog/2013/01/02/disable-auto-character-conversion-when-editting-tex-on-vim</id>
+    <content type="html"><![CDATA[<p>When you edit a latex file, vim automatically change the view.</p>
+
+<p>Like this (the expression is a list of arbitrary figures, Sorry).</p>
+
+<p><img src="http://ompugao.github.com/images/posts/2013-01-02-vim-latex-default.png"/></p>
+
+<p>This annoies me somewhat.</p>
+
+<p>Q. How to disable this function?</p>
+
+<p>A.</p>
+
+<pre><code>:help g:tex_conceal
+</code></pre>
+
+<p>I set this line in my .vimrc.</p>
+
+<pre><code>let g:tex_conceal = ""
+</code></pre>
+
+<p>There are options which characters vim converts or not. You can choose one or some of following options.</p>
+
+<pre><code>a = accents/ligatures
+b = bold and italic
+d = delimiters
+m = math symbols
+g = Greek
+s = superscripts/subscripts
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[a happy new year]]></title>
@@ -677,19 +714,6 @@ sudo cp do-record.sh.pt1 do-record.sh
 <li><a href="http://aqua-linux.blog.so-net.ne.jp/2012-07-27"> Ubuntu 12.04でPT3を試用してみた：PC生活めも：So-netブログ </a></li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Getting Started writing a blog in English]]></title>
-    <link href="http://ompugao.github.com/blog/2012/10/05/Getting-Started/"/>
-    <updated>2012-10-05T00:00:00+09:00</updated>
-    <id>http://ompugao.github.com/blog/2012/10/05/Getting-Started</id>
-    <content type="html"><![CDATA[<p>I&#8217;ll write down my discursive thinking here in English.</p>
-
-<p>If you find my mistakes, please tell me if you don&#8217;t mind.</p>
-
-<p>Sincerely.</p>
 ]]></content>
   </entry>
   
