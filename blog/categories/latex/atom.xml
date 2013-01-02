@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: latex | ompugao's blog]]></title>
+  <link href="http://ompugao.github.com/blog/categories/latex/atom.xml" rel="self"/>
+  <link href="http://ompugao.github.com/"/>
+  <updated>2013-01-02T09:02:36+09:00</updated>
+  <id>http://ompugao.github.com/</id>
+  <author>
+    <name><![CDATA[ompugao]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[disable auto character conversion when editting tex on vim]]></title>
+    <link href="http://ompugao.github.com/blog/2013/01/02/disable-auto-character-conversion-when-editting-tex-on-vim/"/>
+    <updated>2013-01-02T07:48:00+09:00</updated>
+    <id>http://ompugao.github.com/blog/2013/01/02/disable-auto-character-conversion-when-editting-tex-on-vim</id>
+    <content type="html"><![CDATA[<p>When you edit a latex file, vim automatically change the view.</p>
+
+<p>Like this (the expression is a list of arbitrary figures, Sorry).</p>
+
+<p><img src="http://ompugao.github.com/images/posts/2013-01-02-vim-latex-default.png"/></p>
+
+<p>This annoies me somewhat.</p>
+
+<p>Q. How to disable this function?</p>
+
+<p>A.</p>
+
+<pre><code>:help g:tex_conceal
+</code></pre>
+
+<p>I set this line in my .vimrc.</p>
+
+<pre><code>let g:tex_conceal = ""
+</code></pre>
+
+<p>There are options which characters vim converts or not. You can choose one or some of following options.</p>
+
+<pre><code>a = accents/ligatures
+b = bold and italic
+d = delimiters
+m = math symbols
+g = Greek
+s = superscripts/subscripts
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>
