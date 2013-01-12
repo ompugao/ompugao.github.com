@@ -4,7 +4,7 @@
   <title><![CDATA[Category: vim | ompugao's blog]]></title>
   <link href="http://ompugao.github.com/blog/categories/vim/atom.xml" rel="self"/>
   <link href="http://ompugao.github.com/"/>
-  <updated>2013-01-02T09:02:36+09:00</updated>
+  <updated>2013-01-12T19:45:26+09:00</updated>
   <id>http://ompugao.github.com/</id>
   <author>
     <name><![CDATA[ompugao]]></name>
@@ -12,6 +12,20 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[change n charactors]]></title>
+    <link href="http://ompugao.github.com/blog/2013/01/12/change-n-charactors/"/>
+    <updated>2013-01-12T19:40:00+09:00</updated>
+    <id>http://ompugao.github.com/blog/2013/01/12/change-n-charactors</id>
+    <content type="html"><![CDATA[<p>Type like:</p>
+
+<pre><code>4s
+</code></pre>
+
+<p>I've always typed like "4xi"... So embarassed as one of vim users...</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[disable auto character conversion when editting tex on vim]]></title>
@@ -128,27 +142,6 @@ CtrlPF is a function to edit your most recently used file(:edit/:tabedit).</p>
 <p>This plugin is so short (thanks to the ctrlp's cool user commands!) that you can understand what is written in the code at a glance.</p>
 
 <p>Thanks.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[gmail.vim]]></title>
-    <link href="http://ompugao.github.com/blog/2012/11/12/gmail.vim/"/>
-    <updated>2012-11-12T00:00:00+09:00</updated>
-    <id>http://ompugao.github.com/blog/2012/11/12/gmail.vim</id>
-    <content type="html"><![CDATA[<h1>gmail.vim</h1>
-
-<p>New gmail client on vim!!!</p>
-
-<p><a href="https://github.com/yuratomo/gmail.vim">https://github.com/yuratomo/gmail.vim</a></p>
-
-<p>That's what I've wanted!!!</p>
-
-<p>This plugin is superior to VMail!!!</p>
-
-<p>What a nice plugin...</p>
-
-<p>Whew...!</p>
 ]]></content>
   </entry>
   
