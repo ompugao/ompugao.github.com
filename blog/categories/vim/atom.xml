@@ -4,7 +4,7 @@
   <title><![CDATA[Category: vim | ompugao's blog]]></title>
   <link href="http://ompugao.github.com/blog/categories/vim/atom.xml" rel="self"/>
   <link href="http://ompugao.github.com/"/>
-  <updated>2013-01-12T19:45:26+09:00</updated>
+  <updated>2013-01-24T19:10:59+09:00</updated>
   <id>http://ompugao.github.com/</id>
   <author>
     <name><![CDATA[ompugao]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[create ctrlp-ros]]></title>
+    <link href="http://ompugao.github.com/blog/2013/01/24/create-ctrlp-ros/"/>
+    <updated>2013-01-24T19:06:00+09:00</updated>
+    <id>http://ompugao.github.com/blog/2013/01/24/create-ctrlp-ros</id>
+    <content type="html"><![CDATA[<p>I wrote <a href="https://github.com/ompugao/ctrlp-ros">ctrlp-ros</a>, <a href="https://github.com/kien/ctrlp.vim">ctrlp.vim</a> interface for <a href="https://gist.github.com/3851056">rosvim.vim</a>.</p>
+
+<p>Why do I write vimscript...?</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[change n charactors]]></title>
@@ -118,30 +129,6 @@ let g:NERDTreeIgnore=['\.swp$', '\~$']
 <p><a href="https://github.com/vim-jp/issues/issues/275#issuecomment-11187945">https://github.com/vim-jp/issues/issues/275#issuecomment-11187945</a></p>
 
 <p>素晴らしい。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[I wrote a vim plugin called ctrlp-z]]></title>
-    <link href="http://ompugao.github.com/blog/2012/12/04/ctrlp-z/"/>
-    <updated>2012-12-04T00:47:00+09:00</updated>
-    <id>http://ompugao.github.com/blog/2012/12/04/ctrlp-z</id>
-    <content type="html"><![CDATA[<p>Today, I wrote a vim plugin called <a href="https://github.com/ompugao/ctrlp-z">ctrlp-z</a></p>
-
-<p>This is a interface to <a href="https://github.com/clvv/fasd">fasd</a> via <a href="http://kien.github.com/ctrlp.vim/">ctrlp</a>.</p>
-
-<p>One example of setting .vimrc is as follows.</p>
-
-<pre><code>nnoremap &lt;silent&gt;&lt;C-p&gt;&lt;C-f&gt; :&lt;C-u&gt;CtrlPF&lt;CR&gt;
-nnoremap &lt;silent&gt;&lt;C-p&gt;&lt;C-z&gt; :&lt;C-u&gt;CtrlPZ&lt;CR&gt;
-</code></pre>
-
-<p>CtrlPZ is a function to change your working directory(:lcd), and
-CtrlPF is a function to edit your most recently used file(:edit/:tabedit).</p>
-
-<p>This plugin is so short (thanks to the ctrlp's cool user commands!) that you can understand what is written in the code at a glance.</p>
-
-<p>Thanks.</p>
 ]]></content>
   </entry>
   

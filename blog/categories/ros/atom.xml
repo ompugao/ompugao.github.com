@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ros | ompugao's blog]]></title>
   <link href="http://ompugao.github.com/blog/categories/ros/atom.xml" rel="self"/>
   <link href="http://ompugao.github.com/"/>
-  <updated>2013-01-12T19:45:26+09:00</updated>
+  <updated>2013-01-24T19:10:59+09:00</updated>
   <id>http://ompugao.github.com/</id>
   <author>
     <name><![CDATA[ompugao]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[create ctrlp-ros]]></title>
+    <link href="http://ompugao.github.com/blog/2013/01/24/create-ctrlp-ros/"/>
+    <updated>2013-01-24T19:06:00+09:00</updated>
+    <id>http://ompugao.github.com/blog/2013/01/24/create-ctrlp-ros</id>
+    <content type="html"><![CDATA[<p>I wrote <a href="https://github.com/ompugao/ctrlp-ros">ctrlp-ros</a>, <a href="https://github.com/kien/ctrlp.vim">ctrlp.vim</a> interface for <a href="https://gist.github.com/3851056">rosvim.vim</a>.</p>
+
+<p>Why do I write vimscript...?</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[rosvim.vim]]></title>
