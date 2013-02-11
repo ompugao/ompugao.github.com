@@ -9,8 +9,7 @@
   <meta name="author" content="ompugao">
 
   
-  <meta name="description" content="when you open a file which includes a long line on vim. gk - move to the pseudo uppper line
-gj - move to the pseudo following line Hmm&#8230; vim &# &hellip;">
+  <meta name="description" content="type your password only once Add the following function to .zshrc. function savepasswd(){ local password echo -n "password:" read -s password ; echo &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -87,6 +86,105 @@ gj - move to the pseudo following line Hmm&#8230; vim &# &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/blog/2012/10/10/dotfiles-setup/">tmux setting</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-10T00:00:00+09:00" pubdate data-updated="true">Oct 10<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h1>type your password only once</h1>
+
+<p>Add the following function to .zshrc.</p>
+
+<pre><code>function savepasswd(){
+    local password
+    echo -n "password:"
+    read -s password ; echo
+    tmux bind-key y send-keys "$password"
+}
+</code></pre>
+
+<p>Then,call the function and save your password.</p>
+
+<p>And then, type: C-&lt;your tmux prefix> y.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/blog/2012/10/08/rosvim.vim/">rosvim.vim</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-08T00:00:00+09:00" pubdate data-updated="true">Oct 8<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h1>Fix rosvim integration plugin.</h1>
+
+<p>I changed <a href="http://www.ros.org/wiki/IDEs#Vim">the original vimplugin created by Michael Styer</a>.</p>
+
+<p>I enabled the plugin to complete the ros packages.</p>
+
+<script src="https://gist.github.com/3851056.js?file=rosvim.vim"></script>
+
+
+<p>Vimscript is a little difficult for me&#8230;</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -452,6 +550,14 @@ sudo cp do-record.sh.pt1 do-record.sh
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/02/12/new-rosvim-dot-vim-from-gist-to-github/">move rosvim.vim from gist to github</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/02/12/create-ctrlp-history/">create ctrlp-history</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/01/24/create-ctrlp-ros/">create ctrlp-ros</a>
       </li>
     
@@ -461,14 +567,6 @@ sudo cp do-record.sh.pt1 do-record.sh
     
       <li class="post">
         <a href="/blog/2013/01/02/disable-auto-character-conversion-when-editting-tex-on-vim/">disable auto character conversion when editting tex on vim</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/01/01/a-happy-new-year/">a happy new year</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/12/23/how-to-erase-already-existed-characters/">how to erase already existed characters</a>
       </li>
     
   </ul>

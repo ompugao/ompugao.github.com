@@ -58,7 +58,7 @@
         <loc>
             http://ompugao.github.com/blog/2012/12/04/i-wrote-a-termtter-plugin-called-mute-dot-rb/
         </loc>
-        <lastmod>2012-12-04T23:45:01+09:00</lastmod>
+        <lastmod>2012-12-04T23:44:56+09:00</lastmod>
     </url>
     <url>
         <loc>
@@ -72,7 +72,7 @@
     </url>
     <url>
         <loc>http://ompugao.github.com/blog/2012/12/14/cant-git-push-force/</loc>
-        <lastmod>2012-12-14T13:51:57+09:00</lastmod>
+        <lastmod>2012-12-14T13:51:55+09:00</lastmod>
     </url>
     <url>
         <loc>http://ompugao.github.com/blog/2012/12/15/to-vim-plus-git-users/</loc>
@@ -86,7 +86,7 @@
     </url>
     <url>
         <loc>http://ompugao.github.com/blog/2013/01/01/a-happy-new-year/</loc>
-        <lastmod>2013-01-01T00:08:25+09:00</lastmod>
+        <lastmod>2013-01-01T00:08:23+09:00</lastmod>
     </url>
     <url>
         <loc>
@@ -103,11 +103,21 @@
         <lastmod>2013-01-24T19:10:40+09:00</lastmod>
     </url>
     <url>
+        <loc>http://ompugao.github.com/blog/2013/02/12/create-ctrlp-history/</loc>
+        <lastmod>2013-02-12T00:56:28+09:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://ompugao.github.com/blog/2013/02/12/new-rosvim-dot-vim-from-gist-to-github/
+        </loc>
+        <lastmod>2013-02-12T01:24:18+09:00</lastmod>
+    </url>
+    <url>
         <loc>http://ompugao.github.com/blog/archives/</loc>
-        <lastmod>2013-01-24T19:10:40+09:00</lastmod>
+        <lastmod>2013-02-12T01:24:18+09:00</lastmod>
     </url>
     <url>
         <loc>http://ompugao.github.com/</loc>
-        <lastmod>2013-01-24T19:10:40+09:00</lastmod>
+        <lastmod>2013-02-12T01:24:18+09:00</lastmod>
     </url>
 </urlset>

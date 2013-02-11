@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ros | ompugao's blog]]></title>
   <link href="http://ompugao.github.com/blog/categories/ros/atom.xml" rel="self"/>
   <link href="http://ompugao.github.com/"/>
-  <updated>2013-01-24T19:11:21+09:00</updated>
+  <updated>2013-02-12T01:25:02+09:00</updated>
   <id>http://ompugao.github.com/</id>
   <author>
     <name><![CDATA[ompugao]]></name>
@@ -12,6 +12,16 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[move rosvim.vim from gist to github]]></title>
+    <link href="http://ompugao.github.com/blog/2013/02/12/new-rosvim-dot-vim-from-gist-to-github/"/>
+    <updated>2013-02-12T01:22:00+09:00</updated>
+    <id>http://ompugao.github.com/blog/2013/02/12/new-rosvim-dot-vim-from-gist-to-github</id>
+    <content type="html"><![CDATA[<p>You can guess from the title that
+I move rosvim.vim from gist (https://gist.github.com/ompugao/3851056) to github (https://github.com/ompugao/ros.vim.git).</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[create ctrlp-ros]]></title>
