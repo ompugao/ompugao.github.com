@@ -4,7 +4,7 @@
   <title><![CDATA[ompugao's blog]]></title>
   <link href="http://ompugao.github.com/atom.xml" rel="self"/>
   <link href="http://ompugao.github.com/"/>
-  <updated>2013-02-12T01:25:02+09:00</updated>
+  <updated>2013-03-09T04:04:58+09:00</updated>
   <id>http://ompugao.github.com/</id>
   <author>
     <name><![CDATA[ompugao]]></name>
@@ -12,6 +12,34 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[implement mruby xmlrpc client]]></title>
+    <link href="http://ompugao.github.com/blog/2013/03/09/implement-mruby-xmlrpc-client/"/>
+    <updated>2013-03-09T03:55:00+09:00</updated>
+    <id>http://ompugao.github.com/blog/2013/03/09/implement-mruby-xmlrpc-client</id>
+    <content type="html"><![CDATA[<p>初mruby gem → <a href="https://github.com/ompugao/mruby-xmlrpc-client">https://github.com/ompugao/mruby-xmlrpc-client</a>.</p>
+
+<p>test書いてないしssl対応してないしそもそもauthentificationほったらかしだしで、まだちょっと残念な感じだけれど
+まぁとりあえず動いたので公開してみます。
+自分が使う分にはこれで事足り(ｹﾞﾌﾝｹﾞﾌﾝ</p>
+
+<pre><code>a = XMLRPC::Client.new("localhost","",8080)
+begin
+    100.times do |i|
+        a.call("michael.div",i+7,i+4)
+        puts i
+        Sleep.sleep 1
+    end
+rescue RuntimeError =&gt; e
+    puts e
+end
+</code></pre>
+
+<p>みたいなのを走らせると30回目くらいでGCが走ってセグフォるんだけれど,
+どう対処すればいいんだろう？</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[move rosvim.vim from gist to github]]></title>
@@ -450,24 +478,6 @@ ruby:
 <p><a href="http://friendfeed.com/ebith/798d211a/model-db-is-undefined">Model.db is&#8230; - ebith - FriendFeed<br>http://friendfeed.com/ebith/798d211a/model-db-is-undefined</a></p>
 
 <p>I deleted hatenaBookmark addon, delete ~/.mozilla/***/hatenabookmark , reinstall hatena, and login to hatena to fix this problem.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[C]error 'M_PI' undeclared]]></title>
-    <link href="http://ompugao.github.com/blog/2012/10/13/C-M_PI-error/"/>
-    <updated>2012-10-13T00:00:00+09:00</updated>
-    <id>http://ompugao.github.com/blog/2012/10/13/C-M_PI-error</id>
-    <content type="html"><![CDATA[<h1>M_PI not found.</h1>
-
-<p>I&#8217;ve already include math.h and ld libmath.so. Why!?</p>
-
-<p>Ans.:</p>
-
-<pre><code>#define _GNU_SOURCE
-</code></pre>
-
-<p>&#8230;.( ´_ゝ｀) Hmm&#8230; I see.</p>
 ]]></content>
   </entry>
   

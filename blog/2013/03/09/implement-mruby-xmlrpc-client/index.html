@@ -5,12 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>a happy new year - ompugao's blog</title>
+  <title>implement mruby xmlrpc client - ompugao's blog</title>
   <meta name="author" content="ompugao">
 
   
-  <meta name="description" content="Happy New Year! I wish you a healthy happy, and prosperous new year.
-">
+  <meta name="description" content="初mruby gem → https://github.com/ompugao/mruby-xmlrpc-client. test書いてないしssl対応してないしそもそもauthentificationほったらかしだしで、まだちょっと残念な感じだけれど
+まぁとりあえず動いたので公開してみます。 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://ompugao.github.com/blog/2013/01/01/a-happy-new-year/">
+  <link rel="canonical" href="http://ompugao.github.com/blog/2013/03/09/implement-mruby-xmlrpc-client/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -91,7 +91,7 @@
   <header>
     
       
-        <h1 class="entry-title">a happy new year</h1>
+        <h1 class="entry-title">implement mruby xmlrpc client</h1>
       
     
     
@@ -108,16 +108,33 @@
   
 
 
-<time datetime="2013-01-01T00:04:00+09:00" pubdate data-updated="true">Jan 1<span>st</span>, 2013</time>
+<time datetime="2013-03-09T03:55:00+09:00" pubdate data-updated="true">Mar 9<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Happy New Year!</p>
+<div class="entry-content"><p>初mruby gem → <a href="https://github.com/ompugao/mruby-xmlrpc-client">https://github.com/ompugao/mruby-xmlrpc-client</a>.</p>
 
-<p>I wish you a healthy happy, and prosperous new year.</p>
+<p>test書いてないしssl対応してないしそもそもauthentificationほったらかしだしで、まだちょっと残念な感じだけれど
+まぁとりあえず動いたので公開してみます。
+自分が使う分にはこれで事足り(ｹﾞﾌﾝｹﾞﾌﾝ</p>
+
+<pre><code>a = XMLRPC::Client.new("localhost","",8080)
+begin
+    100.times do |i|
+        a.call("michael.div",i+7,i+4)
+        puts i
+        Sleep.sleep 1
+    end
+rescue RuntimeError =&gt; e
+    puts e
+end
+</code></pre>
+
+<p>みたいなのを走らせると30回目くらいでGCが走ってセグフォるんだけれど,
+どう対処すればいいんだろう？</p>
 </div>
 
 
@@ -140,15 +157,21 @@
   
 
 
-<time datetime="2013-01-01T00:04:00+09:00" pubdate data-updated="true">Jan 1<span>st</span>, 2013</time>
+<time datetime="2013-03-09T03:55:00+09:00" pubdate data-updated="true">Mar 9<span>th</span>, 2013</time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/mruby/'>mruby</a>
+  
+</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://ompugao.github.com/blog/2013/01/01/a-happy-new-year/" data-via="ompugao" data-counturl="http://ompugao.github.com/blog/2013/01/01/a-happy-new-year/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://ompugao.github.com/blog/2013/03/09/implement-mruby-xmlrpc-client/" data-via="ompugao" data-counturl="http://ompugao.github.com/blog/2013/03/09/implement-mruby-xmlrpc-client/" >Tweet</a>
   
   
   
@@ -159,10 +182,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left articlenav" href="/blog/2012/12/23/how-to-erase-already-existed-characters/" title="Previous Post: how to erase already existed characters">&laquo; how to erase already existed characters</a>
+        <a class="basic-alignment left articlenav" href="/blog/2013/02/12/new-rosvim-dot-vim-from-gist-to-github/" title="Previous Post: move rosvim.vim from gist to github">&laquo; move rosvim.vim from gist to github</a>
       
-      
-        <a class="basic-alignment right articlenav" href="/blog/2013/01/02/disable-auto-character-conversion-when-editting-tex-on-vim/" title="Next Post: disable auto character conversion when editting tex on vim">disable auto character conversion when editting tex on vim &raquo;</a>
       
     </p>
   </footer>
@@ -281,8 +302,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://ompugao.github.com/blog/2013/01/01/a-happy-new-year/';
-        var disqus_url = 'http://ompugao.github.com/blog/2013/01/01/a-happy-new-year/';
+        var disqus_identifier = 'http://ompugao.github.com/blog/2013/03/09/implement-mruby-xmlrpc-client/';
+        var disqus_url = 'http://ompugao.github.com/blog/2013/03/09/implement-mruby-xmlrpc-client/';
         var disqus_script = 'embed.js';
       
     (function () {

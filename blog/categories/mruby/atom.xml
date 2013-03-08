@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: mruby | ompugao's blog]]></title>
+  <link href="http://ompugao.github.com/blog/categories/mruby/atom.xml" rel="self"/>
+  <link href="http://ompugao.github.com/"/>
+  <updated>2013-03-09T04:04:58+09:00</updated>
+  <id>http://ompugao.github.com/</id>
+  <author>
+    <name><![CDATA[ompugao]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[implement mruby xmlrpc client]]></title>
+    <link href="http://ompugao.github.com/blog/2013/03/09/implement-mruby-xmlrpc-client/"/>
+    <updated>2013-03-09T03:55:00+09:00</updated>
+    <id>http://ompugao.github.com/blog/2013/03/09/implement-mruby-xmlrpc-client</id>
+    <content type="html"><![CDATA[<p>初mruby gem → <a href="https://github.com/ompugao/mruby-xmlrpc-client">https://github.com/ompugao/mruby-xmlrpc-client</a>.</p>
+
+<p>test書いてないしssl対応してないしそもそもauthentificationほったらかしだしで、まだちょっと残念な感じだけれど
+まぁとりあえず動いたので公開してみます。
+自分が使う分にはこれで事足り(ｹﾞﾌﾝｹﾞﾌﾝ</p>
+
+<pre><code>a = XMLRPC::Client.new("localhost","",8080)
+begin
+    100.times do |i|
+        a.call("michael.div",i+7,i+4)
+        puts i
+        Sleep.sleep 1
+    end
+rescue RuntimeError =&gt; e
+    puts e
+end
+</code></pre>
+
+<p>みたいなのを走らせると30回目くらいでGCが走ってセグフォるんだけれど,
+どう対処すればいいんだろう？</p>
+]]></content>
+  </entry>
+  
+</feed>

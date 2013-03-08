@@ -9,8 +9,8 @@
   <meta name="author" content="ompugao">
 
   
-  <meta name="description" content="You can guess from the title that
-I move rosvim.vim from gist (https://gist.github.com/ompugao/3851056) to github (https://github.com/ompugao/ros.vim &hellip;">
+  <meta name="description" content="初mruby gem → https://github.com/ompugao/mruby-xmlrpc-client. test書いてないしssl対応してないしそもそもauthentificationほったらかしだしで、まだちょっと残念な感じだけれど
+まぁとりあえず動いたので公開してみます。 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -87,6 +87,63 @@ I move rosvim.vim from gist (https://gist.github.com/ompugao/3851056) to github 
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/blog/2013/03/09/implement-mruby-xmlrpc-client/">implement mruby xmlrpc client</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-09T03:55:00+09:00" pubdate data-updated="true">Mar 9<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>初mruby gem → <a href="https://github.com/ompugao/mruby-xmlrpc-client">https://github.com/ompugao/mruby-xmlrpc-client</a>.</p>
+
+<p>test書いてないしssl対応してないしそもそもauthentificationほったらかしだしで、まだちょっと残念な感じだけれど
+まぁとりあえず動いたので公開してみます。
+自分が使う分にはこれで事足り(ｹﾞﾌﾝｹﾞﾌﾝ</p>
+
+<pre><code>a = XMLRPC::Client.new("localhost","",8080)
+begin
+    100.times do |i|
+        a.call("michael.div",i+7,i+4)
+        puts i
+        Sleep.sleep 1
+    end
+rescue RuntimeError =&gt; e
+    puts e
+end
+</code></pre>
+
+<p>みたいなのを走らせると30回目くらいでGCが走ってセグフォるんだけれど,
+どう対処すればいいんだろう？</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -524,71 +581,6 @@ cat config
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
-        <h1 class="entry-title"><a href="/blog/2012/12/10/change-my-filer-on-vim/">change my filer on vim</a></h1>
-      
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-12-10T13:55:00+09:00" pubdate data-updated="true">Dec 10<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="https://github.com/vim-jp/issues/issues/275">let g:netrw_liststyle=3でディレクトリ移動ができない · Issue #275 · vim-jp/issues</a></p>
-
-<p>にissue登録したら、伸びた。</p>
-
-<p>netrw.vimをちらっとみたら、foldingだけでお腹いっぱいになる。</p>
-
-<p>ずいぶんと根の深い問題のようだったので、しぶしぶnetrwを止め、nerdtreeに移行しました。</p>
-
-<pre><code>NeoBundle 'scrooloose/nerdtree'
-let NERDTreeShowHidden = 1
-nnoremap &lt;C-@&gt;&lt;C-t&gt; :&lt;C-u&gt;NERDTreeToggle&lt;CR&gt;
-nnoremap &lt;C-@&gt;&lt;C-f&gt; :&lt;C-u&gt;NERDTreeFocus&lt;CR&gt;
-nnoremap &lt;space&gt;e   :&lt;C-u&gt;NERDTree&lt;CR&gt;
-let g:NERDTreeWinPos="left" "or right
-let g:NERDTreeIgnore=['\.swp$', '\~$']
-</code></pre>
-
-<p>vim-jpのみなさんには頭が下がります。</p>
-
-<p>// なぜかvim-jpのwriterにして頂いたんですが。。。僕を振っても何も出てこないですよぉー</p>
-
-<p>追記:</p>
-
-<p><a href="https://github.com/ynkdir">@ynkdir</a>さんがbugfixして下さいましたね。</p>
-
-<p><a href="https://github.com/vim-jp/issues/issues/275#issuecomment-11187945">https://github.com/vim-jp/issues/issues/275#issuecomment-11187945</a></p>
-
-<p>素晴らしい。</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -604,6 +596,10 @@ let g:NERDTreeIgnore=['\.swp$', '\~$']
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/03/09/implement-mruby-xmlrpc-client/">implement mruby xmlrpc client</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/02/12/new-rosvim-dot-vim-from-gist-to-github/">move rosvim.vim from gist to github</a>
       </li>
     
@@ -617,10 +613,6 @@ let g:NERDTreeIgnore=['\.swp$', '\~$']
     
       <li class="post">
         <a href="/blog/2013/01/12/change-n-charactors/">change n charactors</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/01/02/disable-auto-character-conversion-when-editting-tex-on-vim/">disable auto character conversion when editting tex on vim</a>
       </li>
     
   </ul>

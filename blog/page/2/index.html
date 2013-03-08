@@ -9,9 +9,7 @@
   <meta name="author" content="ompugao">
 
   
-  <meta name="description" content=" usage: edic in front of
-edic information etc.etc&#8230; Pretty small hack is so fun to me.
-">
+  <meta name="description" content="let g:netrw_liststyle=3でディレクトリ移動ができない · Issue #275 · vim-jp/issues にissue登録したら、伸びた。 netrw.vimをちらっとみたら、foldingだけでお腹いっぱいになる。 ずいぶんと根の深い問題のようだったので、 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,6 +86,71 @@ edic information etc.etc&#8230; Pretty small hack is so fun to me.
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/blog/2012/12/10/change-my-filer-on-vim/">change my filer on vim</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-10T13:55:00+09:00" pubdate data-updated="true">Dec 10<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="https://github.com/vim-jp/issues/issues/275">let g:netrw_liststyle=3でディレクトリ移動ができない · Issue #275 · vim-jp/issues</a></p>
+
+<p>にissue登録したら、伸びた。</p>
+
+<p>netrw.vimをちらっとみたら、foldingだけでお腹いっぱいになる。</p>
+
+<p>ずいぶんと根の深い問題のようだったので、しぶしぶnetrwを止め、nerdtreeに移行しました。</p>
+
+<pre><code>NeoBundle 'scrooloose/nerdtree'
+let NERDTreeShowHidden = 1
+nnoremap &lt;C-@&gt;&lt;C-t&gt; :&lt;C-u&gt;NERDTreeToggle&lt;CR&gt;
+nnoremap &lt;C-@&gt;&lt;C-f&gt; :&lt;C-u&gt;NERDTreeFocus&lt;CR&gt;
+nnoremap &lt;space&gt;e   :&lt;C-u&gt;NERDTree&lt;CR&gt;
+let g:NERDTreeWinPos="left" "or right
+let g:NERDTreeIgnore=['\.swp$', '\~$']
+</code></pre>
+
+<p>vim-jpのみなさんには頭が下がります。</p>
+
+<p>// なぜかvim-jpのwriterにして頂いたんですが。。。僕を振っても何も出てこないですよぉー</p>
+
+<p>追記:</p>
+
+<p><a href="https://github.com/ynkdir">@ynkdir</a>さんがbugfixして下さいましたね。</p>
+
+<p><a href="https://github.com/vim-jp/issues/issues/275#issuecomment-11187945">https://github.com/vim-jp/issues/issues/275#issuecomment-11187945</a></p>
+
+<p>素晴らしい。</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -579,53 +642,6 @@ ruby:
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
-        <h1 class="entry-title"><a href="/blog/2012/10/13/C-M_PI-error/">[C]error &#8216;M_PI&#8217; undeclared</a></h1>
-      
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-10-13T00:00:00+09:00" pubdate data-updated="true">Oct 13<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h1>M_PI not found.</h1>
-
-<p>I&#8217;ve already include math.h and ld libmath.so. Why!?</p>
-
-<p>Ans.:</p>
-
-<pre><code>#define _GNU_SOURCE
-</code></pre>
-
-<p>&#8230;.( ´_ゝ｀) Hmm&#8230; I see.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -643,6 +659,10 @@ ruby:
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/03/09/implement-mruby-xmlrpc-client/">implement mruby xmlrpc client</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/02/12/new-rosvim-dot-vim-from-gist-to-github/">move rosvim.vim from gist to github</a>
       </li>
     
@@ -656,10 +676,6 @@ ruby:
     
       <li class="post">
         <a href="/blog/2013/01/12/change-n-charactors/">change n charactors</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/01/02/disable-auto-character-conversion-when-editting-tex-on-vim/">disable auto character conversion when editting tex on vim</a>
       </li>
     
   </ul>
