@@ -4,7 +4,7 @@
   <title><![CDATA[ompugao's blog]]></title>
   <link href="http://ompugao.github.com/atom.xml" rel="self"/>
   <link href="http://ompugao.github.com/"/>
-  <updated>2013-03-09T04:04:58+09:00</updated>
+  <updated>2013-03-11T01:56:29+09:00</updated>
   <id>http://ompugao.github.com/</id>
   <author>
     <name><![CDATA[ompugao]]></name>
@@ -12,6 +12,35 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[build libuv on ubuntu (kernel 3.x)]]></title>
+    <link href="http://ompugao.github.com/blog/2013/03/11/build-libuv-on-ubuntu-kernel-3-dot-x/"/>
+    <updated>2013-03-11T01:48:00+09:00</updated>
+    <id>http://ompugao.github.com/blog/2013/03/11/build-libuv-on-ubuntu-kernel-3-dot-x</id>
+    <content type="html"><![CDATA[<p>mruby-uvを使いたい<br/>
+→ <a href="https://github.com/joyent/libuv">libuv</a>をubuntu preciseにインストールしようとするもエラー<br/>
+→ READMEにはkernel 2.6系をsupportすると書いてある<br/>
+→ 試しにdebian squeeze(kernel 2.6.x)でbuildしたら動く<br/>
+→ ふむkernel 2.6系でないとダメか<br/>
+→ kernel コンパイル<br/>
+→ nvidiaまわりで不具合<br/>
+→ ＼( &#8216;ω&#8217;)／ウォァァァァ<br/>
+→ libuvってそんなにkernelに食い込んでるのか？<br/>
+→ なんとなくconfig-unix.mkの</p>
+
+<pre><code>ifeq (linux,$(OS))
+</code></pre>
+
+<p>を</p>
+
+<pre><code>ifeq (Linux,$(OS))
+</code></pre>
+
+<p>にしてみる<br/>
+→動くじゃんorz</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[implement mruby xmlrpc client]]></title>
@@ -446,38 +475,6 @@ ruby:
 <p><a href="http://github.com/ompugao/tmux-powerline">http://github.com/ompugao/tmux-powerline</a></p>
 
 <p>Great!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[how to fix the resolution of my computer?  etc...]]></title>
-    <link href="http://ompugao.github.com/blog/2012/10/13/diary/"/>
-    <updated>2012-10-13T00:00:00+09:00</updated>
-    <id>http://ompugao.github.com/blog/2012/10/13/diary</id>
-    <content type="html"><![CDATA[<h1>how to fix the resolution of my computer?</h1>
-
-<p>I&#8217;ve tried to fix the resolution of my computer with cvt/xrandr command, but xrandr says:</p>
-
-<pre><code>X Error of failed request: BadMatch (invalid parameter attributes)
-</code></pre>
-
-<p>What should I do&#8230;</p>
-
-<h1>Bumped into dependency hell.</h1>
-
-<p>When I try to install hoogle, cabal returned a dependency error.</p>
-
-<p>&#8230;. I can see the future in which I am caught in the tangled dependency hell over some libraries I use.</p>
-
-<p>Cabal developers should implement a system like the rvm&#8217;s gemset.</p>
-
-<h1>vimperator dump error:Model.db is undefined</h1>
-
-<p>Thanks to this page:</p>
-
-<p><a href="http://friendfeed.com/ebith/798d211a/model-db-is-undefined">Model.db is&#8230; - ebith - FriendFeed<br>http://friendfeed.com/ebith/798d211a/model-db-is-undefined</a></p>
-
-<p>I deleted hatenaBookmark addon, delete ~/.mozilla/***/hatenabookmark , reinstall hatena, and login to hatena to fix this problem.</p>
 ]]></content>
   </entry>
   
