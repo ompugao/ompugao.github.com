@@ -4,7 +4,7 @@
   <title><![CDATA[ompugao's blog]]></title>
   <link href="http://ompugao.github.com/atom.xml" rel="self"/>
   <link href="http://ompugao.github.com/"/>
-  <updated>2013-03-11T01:56:54+09:00</updated>
+  <updated>2013-03-11T19:18:43+09:00</updated>
   <id>http://ompugao.github.com/</id>
   <author>
     <name><![CDATA[ompugao]]></name>
@@ -12,6 +12,16 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[change my vim colorscheme]]></title>
+    <link href="http://ompugao.github.com/blog/2013/03/11/change-my-vim-colorscheme/"/>
+    <updated>2013-03-11T19:14:00+09:00</updated>
+    <id>http://ompugao.github.com/blog/2013/03/11/change-my-vim-colorscheme</id>
+    <content type="html"><![CDATA[<p>I&#8217;m now using Tomorrow-Night-Blue included in <a href="https://github.com/chriskempson/tomorrow-theme">chriskempson/tomorrow-theme · GitHub</a>.
+(I fixed a little →<a href="https://github.com/ompugao/dotfiles/blob/master/vim/colors/Tomorrow-Night-Blue.vim">here!</a>)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[build libuv on ubuntu (kernel 3.x)]]></title>
@@ -449,32 +459,6 @@ ruby:
 <p>What a nice plugin&#8230;</p>
 
 <p>Whew&#8230;!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[tmux-powerline]]></title>
-    <link href="http://ompugao.github.com/blog/2012/10/17/tmux-powerline/"/>
-    <updated>2012-10-17T00:00:00+09:00</updated>
-    <id>http://ompugao.github.com/blog/2012/10/17/tmux-powerline</id>
-    <content type="html"><![CDATA[<h1>install tmux-powerline</h1>
-
-<p>Tmux status bar gets to show me</p>
-
-<ul>
-<li>lan ip</li>
-<li>wan ip</li>
-<li>windows/panes</li>
-<li>load</li>
-<li>battery status</li>
-<li>weather/temperature</li>
-<li>date</li>
-</ul>
-
-
-<p><a href="http://github.com/ompugao/tmux-powerline">http://github.com/ompugao/tmux-powerline</a></p>
-
-<p>Great!</p>
 ]]></content>
   </entry>
   
