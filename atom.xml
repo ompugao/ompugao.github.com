@@ -4,7 +4,7 @@
   <title><![CDATA[@ompugao_ blog]]></title>
   <link href="http://ompugao.github.com/atom.xml" rel="self"/>
   <link href="http://ompugao.github.com/"/>
-  <updated>2013-03-21T11:56:24+09:00</updated>
+  <updated>2013-04-17T09:59:56+09:00</updated>
   <id>http://ompugao.github.com/</id>
   <author>
     <name><![CDATA[ompugao]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[implement mruby_xmlrpc]]></title>
+    <link href="http://ompugao.github.com/blog/2013/04/17/implement-mruby-xmlrpc/"/>
+    <updated>2013-04-17T09:57:00+09:00</updated>
+    <id>http://ompugao.github.com/blog/2013/04/17/implement-mruby-xmlrpc</id>
+    <content type="html"><![CDATA[<p>I implemented mruby_xmlrpc a little days ago.</p>
+
+<p><a href="http://github.com/ompugao/mruby-xmlrpc">Here is the repo</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[change my vim colorscheme]]></title>
@@ -438,27 +449,6 @@ ruby:
 <p>And personally, I highly evaluate the fact that it is written by Ruby (I&#8217;m a ruby lover).</p>
 
 <p>What a wonderful world!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[gmail.vim]]></title>
-    <link href="http://ompugao.github.com/blog/2012/11/12/gmail.vim/"/>
-    <updated>2012-11-12T00:00:00+09:00</updated>
-    <id>http://ompugao.github.com/blog/2012/11/12/gmail.vim</id>
-    <content type="html"><![CDATA[<h1>gmail.vim</h1>
-
-<p>New gmail client on vim!!!</p>
-
-<p><a href="https://github.com/yuratomo/gmail.vim">https://github.com/yuratomo/gmail.vim</a></p>
-
-<p>That&#8217;s what I&#8217;ve wanted!!!</p>
-
-<p>This plugin is superior to VMail!!!</p>
-
-<p>What a nice plugin&#8230;</p>
-
-<p>Whew&#8230;!</p>
 ]]></content>
   </entry>
   
