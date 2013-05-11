@@ -4,7 +4,7 @@
   <title><![CDATA[@ompugao_ blog]]></title>
   <link href="http://ompugao.github.com/atom.xml" rel="self"/>
   <link href="http://ompugao.github.com/"/>
-  <updated>2013-05-10T18:34:10+09:00</updated>
+  <updated>2013-05-11T14:22:19+09:00</updated>
   <id>http://ompugao.github.com/</id>
   <author>
     <name><![CDATA[ompugao]]></name>
@@ -31,6 +31,8 @@
 <li>update/createで新しいページに移らないようにする</li>
 <li>全文検索</li>
 <li>ファイル名のインクリメンタル検索</li>
+<li>編集時に画像やpdfをupload可能に</li>
+<li>mathjax.jsいれる</li>
 </ul>
 
 
