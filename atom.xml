@@ -4,7 +4,7 @@
   <title><![CDATA[@ompugao_ blog]]></title>
   <link href="http://ompugao.github.com/atom.xml" rel="self"/>
   <link href="http://ompugao.github.com/"/>
-  <updated>2013-05-11T14:22:19+09:00</updated>
+  <updated>2013-05-11T14:26:00+09:00</updated>
   <id>http://ompugao.github.com/</id>
   <author>
     <name><![CDATA[ompugao]]></name>
@@ -33,10 +33,11 @@
 <li>ファイル名のインクリメンタル検索</li>
 <li>編集時に画像やpdfをupload可能に</li>
 <li>mathjax.jsいれる</li>
+<li>ソースコードの色づけ</li>
 </ul>
 
 
-<p>くらい。まぁすぐできるでしょう。</p>
+<p>くらい。まぁ(一部除き)すぐできるでしょう。</p>
 
 <p>pull requestお待ちしてます。</p>
 
